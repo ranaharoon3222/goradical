@@ -1,6 +1,7 @@
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './containers/Home'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './containers/Home';
+
 function App() {
   return (
     <>
@@ -10,7 +11,6 @@ function App() {
       </main>
       <Footer />
     </>
-
   );
 }
 
