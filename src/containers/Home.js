@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Client } from '../PrismicClient';
 import Banner from '../components/Banner';
 import Brand from '../components/Brand';
 import About from '../components/About';
@@ -7,7 +8,7 @@ import CallToAction from '../components/CallToAction';
 import Pricing from '../components/Pricing';
 import Testimonial from '../components/Testimonial';
 import Newsletter from '../components/Newsletter';
-import { Client } from '../PrismicClient';
+import Loading from '../components/Loader/loadingSpinner';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -23,10 +24,8 @@ const Home = () => {
   }, []);
 
   if (data.length === 0) {
-    return 'Loading...';
+    return <Loading />;
   }
-
-  console.log(data);
 
   const banner = data.body.filter((item) => item.slice_type === 'banner')[0];
   const logoSlider = data.body.filter(
