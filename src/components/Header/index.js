@@ -62,11 +62,15 @@ const Index = () => {
             <div className='ml-auto right-content'>
               <div className='contact-number'>
                 <a
-                  className='primary__button primary__button-bgBlack'
+                  className='primary__button !flex primary__button-bgBlack'
                   href={`tel:${phone}`}
                 >
-                  <img src='assets/img/logo/phone-alt.svg' alt='phone alt' />+
-                  {phone}
+                  <img
+                    src='assets/img/logo/phone-alt.svg'
+                    className='mr-3'
+                    alt='phone alt'
+                  />
+                  +{phone}
                 </a>
               </div>
             </div>

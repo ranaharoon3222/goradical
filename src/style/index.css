@@ -47,6 +47,31 @@ button:disabled {
   width: 100%;
   margin-top: 30px !important;
 }
+
+/* width */
+.img-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+
+/* Track */
+.img-scroll::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #ff465f31;
+}
+
+/* Handle */
+.img-scroll::-webkit-scrollbar-thumb {
+  background: #ff465fdb;
+  border-radius: 100vh;
+  border: 2px solid #ff465fdb;
+}
+
+/* Handle on hover */
+.img-scroll::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
 @media all and (max-width: 600px) {
   .embla__slide {
     min-width: 100%;

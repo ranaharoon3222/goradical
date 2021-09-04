@@ -5,9 +5,9 @@ import Brand from '../components/Brand';
 import About from '../components/About';
 import Services from '../components/Services';
 import CallToAction from '../components/CallToAction';
-import Pricing from '../components/Pricing';
 import Testimonial from '../components/Testimonial';
 import Newsletter from '../components/Newsletter';
+import Portfolio from '../components/portfolio';
 import Loading from '../components/Loader/loadingSpinner';
 
 const Home = () => {
@@ -32,6 +32,11 @@ const Home = () => {
     (item) => item.slice_type === 'logo_slider'
   )[0];
   const aboutUs = data.body.filter((item) => item.slice_type === 'about_us')[0];
+  const portfolio = data.body.filter(
+    (item) => item.slice_type === 'portfolio'
+  )[0];
+
+  console.log(portfolio, 'portfolio');
 
   return (
     <>
@@ -40,10 +45,10 @@ const Home = () => {
         slideItems={logoSlider.items}
         title={logoSlider.primary.logo_slider_title[0].text}
       />
+      <Portfolio portfolio={portfolio} />
       <About about={aboutUs.primary} />
       <Services />
       <CallToAction />
-      <Pricing />
       <Testimonial />
       <Newsletter />
     </>
