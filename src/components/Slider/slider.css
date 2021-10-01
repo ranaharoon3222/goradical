@@ -1,0 +1,34 @@
+.slider-home {
+  margin-top: 90px;
+}
+.home-slide {
+  min-width: 45%;
+  transition: all 0.5s;
+}
+.home-slide img {
+  border: 4px solid gray;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+.home-slide.is-selected {
+  z-index: 22;
+}
+.home-slide.is-selected img {
+  transition: all 0.5s;
+  transform: scale(1.7);
+}
+.embla__viewport.custom {
+  overflow: visible;
+}
+
+@media all and (max-width: 980px) {
+  .home-slide {
+    min-width: 100%;
+  }
+  .home-slide.is-selected img {
+    transform: scale(1);
+  }
+  .slider-home {
+    margin-top: 0px;
+  }
+}

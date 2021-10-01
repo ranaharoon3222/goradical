@@ -1,0 +1,21 @@
+.slider-trending {
+  margin-top: 90px;
+}
+.home-trending {
+  min-width: 35%;
+  transition: all 0.5s;
+}
+.home-trending img {
+  border: 4px solid gray;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+@media all and (max-width: 980px) {
+  .home-trending {
+    min-width: 100%;
+  }
+  .slider-trending {
+    margin-top: 0px;
+  }
+}

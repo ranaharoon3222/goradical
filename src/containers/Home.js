@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Client } from '../PrismicClient';
-import Banner from '../components/Banner';
 import Brand from '../components/Brand';
 import About from '../components/About';
 import Services from '../components/Services';
@@ -8,6 +7,8 @@ import CallToAction from '../components/CallToAction';
 import Testimonial from '../components/Testimonial';
 import Newsletter from '../components/Newsletter';
 import Portfolio from '../components/portfolio';
+import Slider from '../components/Slider';
+import Trending from '../components/Trending';
 import Loading from '../components/Loader/loadingSpinner';
 
 const Home = () => {
@@ -27,7 +28,6 @@ const Home = () => {
     return <Loading />;
   }
 
-  const banner = data.body.filter((item) => item.slice_type === 'banner')[0];
   const logoSlider = data.body.filter(
     (item) => item.slice_type === 'logo_slider'
   )[0];
@@ -36,11 +36,17 @@ const Home = () => {
     (item) => item.slice_type === 'portfolio'
   )[0];
 
-  console.log(portfolio, 'portfolio');
+  const slider = data.body.filter((item) => item.slice_type === 'slider')[0];
+  const trending = data.body.filter(
+    (item) => item.slice_type === 'trending'
+  )[0];
+  console.log(trending);
 
   return (
     <>
-      <Banner banner={banner.primary} />
+      <Slider slideItems={slider.items} />
+      <Trending slideItems={trending.items} />
+      {/* <Banner banner={banner.primary} /> */}
       <Brand
         slideItems={logoSlider.items}
         title={logoSlider.primary.logo_slider_title[0].text}
