@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Client } from '../PrismicClient';
-import Brand from '../components/Brand';
+// import Brand from '../components/Brand';
 import About from '../components/About';
 import Services from '../components/Services';
 import CallToAction from '../components/CallToAction';
 import Testimonial from '../components/Testimonial';
-import Newsletter from '../components/Newsletter';
+// import Newsletter from '../components/Newsletter';
 import Portfolio from '../components/portfolio';
 import Slider from '../components/Slider';
 import Trending from '../components/Trending';
@@ -28,9 +28,9 @@ const Home = () => {
     return <Loading />;
   }
 
-  const logoSlider = data.body.filter(
-    (item) => item.slice_type === 'logo_slider'
-  )[0];
+  // const logoSlider = data.body.filter(
+  //   (item) => item.slice_type === 'logo_slider'
+  // )[0];
   const aboutUs = data.body.filter((item) => item.slice_type === 'about_us')[0];
   const portfolio = data.body.filter(
     (item) => item.slice_type === 'portfolio'
