@@ -46,17 +46,11 @@ const Home = () => {
     <>
       <Slider slideItems={slider.items} />
       <Trending slideItems={trending.items} />
-      {/* <Banner banner={banner.primary} /> */}
-      <Brand
-        slideItems={logoSlider.items}
-        title={logoSlider.primary.logo_slider_title[0].text}
-      />
       <Portfolio portfolio={portfolio} />
       <About about={aboutUs.primary} />
       <Services />
       <CallToAction />
       <Testimonial />
-      <Newsletter />
     </>
   );
 };
